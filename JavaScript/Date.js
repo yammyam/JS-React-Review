@@ -32,4 +32,4 @@ date1.setSeconds(59);
 
 //5. 시간을 여러 포맷으로 출력하기
 console.log(date1.toDateString());
-console.log(date1.toLocaleString());
+console.log(date1.toLocaleString()); //현지화 시간으로 보기
