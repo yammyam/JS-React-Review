@@ -27,3 +27,16 @@ function printName(person) {
 
 let person = null;
 printName(person);
+
+//단락평가로 더 깔끔히 하는법
+function printName(person) {
+  console.log(person && person.name);
+}
+
+function printName(person) {
+  let name = person && person.name;
+  console.log(name || "person의 값이 없음");
+}
+// 주의
+// Truthy || Truthy  , 앞쪽 Truthy한 값이 나옴
+// Truthy && Truthy  , 뒤의 Truthy한 값이 나옴

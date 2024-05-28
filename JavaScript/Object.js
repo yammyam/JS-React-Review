@@ -55,3 +55,24 @@ const method1 = {
 
 method1.sayHi();
 method1["sayHi"]();
+
+//객체는 객체타입이기 때문에 주솟값으로 서롤 비교하기 때문에 내용물이 같더라도 주솟값이 서로 다르면 다른것.
+//프로퍼티끼리 비교하기 위해선 JSON.stringify를 이용함
+//얕은복사 vs 깊은복사
+//얕은비교 vs 깊은비교
+
+// 객체순회 종류 3가지
+let person4 = {
+  name: " 이상태",
+  age: 25,
+  hobby: "축구",
+};
+let keys = Object.keys(person4); //내장함수 Object.keys, Object.values
+console.log(keys); //keys는 배열
+
+let values = Object.values(person4); //["이상태", 25, "축구"]
+
+//객체만을 위한 반복분 for in 문,  배열만을 위한 for of 문
+for (let key in person4) {
+  console.log(key, person4[key]);
+}
