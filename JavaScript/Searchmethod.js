@@ -46,4 +46,4 @@ const fined = arr5.find((item) => {
   return item.name === "이상태";
 });
 
-console.log(fined);
+// console.log(fined);
