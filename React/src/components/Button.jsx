@@ -1,6 +1,16 @@
+//리액트에서 발생하는 모든 이벤트들은 이밴트 핸들러 함수를 실행하면서 이벤트 객체를 제공함
 const Button = ({ text, color = "balck", children }) => {
+  const onClickButton = (e) => {
+    console.log(e);
+    console.log(text);
+  };
+
   return (
-    <button style={{ color: color }}>
+    <button
+      onClick={onClickButton}
+      //   onMouseEnter={onClickButton}
+      style={{ color: color }}
+    >
       {text}-{color.toUpperCase()}
       {children}
     </button>

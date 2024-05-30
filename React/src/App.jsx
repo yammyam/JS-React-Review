@@ -1,27 +1,20 @@
+//리렌더링이 일어나는 3가지
+// 1, 자신의 state변경
+// 2, 자신이 제공받는 props의 값이 변경됐을때
+// 3, 부모컴포넌트가 리렌더링되면 자식도 리렌더링됨
 import "./App.css";
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-import Footer from "./components/Footer.jsx";
-import Button from "./components/Button.jsx";
+import { useState } from "react";
+import Bulb from "./components/Bulb";
+import Counter from "./components/Counter";
 
 function App() {
   //App이라는 부모 컴포넌트(루트컴포넌트) 아래 Header라는 자식 컴포넌트가 있다.
-  const buttonProps = {
-    text: "메일",
-    color: "red",
-    a: 1,
-    b: 2,
-    c: 3,
-  };
   return (
     <>
-      <Button {...buttonProps} />
-      <Button text={"카페"} />
-      <Button text={"블로그"}>
-        {/* <div>자식요소</div> */}
-        {/* 자식컴포넌트에서 children 이라는 props 이름으로 넘겨짐 */}
-        <Header />
-      </Button>
+      <div>
+        <Bulb />
+        <Counter />
+      </div>
     </>
   );
 }
